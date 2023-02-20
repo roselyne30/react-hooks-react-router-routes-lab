@@ -5,9 +5,27 @@ import Home from "./Home";
 import Actors from "./Actors";
 import Directors from "./Directors";
 import Movies from "./Movies";
+import { render } from "react-dom";
 
 function App() {
-  return <div>{/*{code here}*/}</div>;
+return(
+  <div>
+<NavBar />
+<Switch>
+<Route exact path="/"><Home />
+  </Route> 
+  <Route exact path="/movies"><Movies />
+  </Route>
+  <Route exact path="/directors"><Directors />
+  </Route>
+  <Route exact path="/actors"><Actors />
+  </Route>
+</Switch>
+  </div>
+)
+
+
+  
 }
 
 export default App;
